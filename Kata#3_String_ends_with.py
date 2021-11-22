@@ -12,17 +12,22 @@ solution('abc', 'd') # returns false
 """
 
 # My solutions
+
 def solution(string, ending):
     return string.endswith(ending)
 
-# Other solutions
+# The best solution
+
 solution = str.endswith
+
+# Other solutions
 
 def solution(string, ending):
     return ending in string[-len(ending):]
 
+##########################################
+
 def solution(string, ending):
-    # your code here...
     string1 = len(string) - len(ending)
     string2 = len(string) - string1
     string3 = string[string1:]
@@ -31,14 +36,18 @@ def solution(string, ending):
     else:
         return False
 
+#########################################
+
 def solution(string, ending):
     if string.endswith(ending):
         return True
     return False
 
+#########################################
+
 solution=str.endswith
-# Easy peasy
+
+#########################################
 
 def solution(string, ending):
-    # your code here...
     return ending == string[len(string)-len(ending):]
